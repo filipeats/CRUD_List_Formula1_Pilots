@@ -1,0 +1,30 @@
+<!-- templates/home.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Bem-vindo à Central da Fórmula 1</h2>
+
+    <p>
+        A Fórmula 1, categoria máxima do automobilismo, é uma emocionante competição anual que reúne carros de alta tecnologia, pilotos talentosos e estratégias táticas. Ao longo da temporada, Grandes Prêmios (GPs) acontecem em circuitos icônicos ao redor do mundo, oferecendo uma experiência única e imprevisível.
+    </p>
+
+    <h3>Como Funciona:</h3>
+    <p>
+        Equipes projetam carros avançados que competem em corridas estratégicas. A temporada, composta por diversas corridas, culmina na pontuação acumulada pelos pilotos, decidindo o campeão do ano.
+    </p>
+
+    <h3>O que Torna Única:</h3>
+    <p>
+        Dos carros de alta tecnologia às estratégias de corrida, cada elemento contribui para a intensidade da F1. Pit stops, trocas de pneus e rivalidades entre equipes e pilotos adicionam emoção a cada corrida.
+    </p>
+
+    <h3>Sobre Nossa API:</h3>
+    <p>
+        Conheça nossa API dedicada à Fórmula 1, fornecendo uma maneira eficiente de gerenciar informações sobre pilotos, equipes e nacionalidade. Explore e gerencie seus dados favoritos sobre a F1 de forma personalizada.
+    </p>
+
+    <div class="text-center">
+        <a href="{{ url_for('mostrar_index') }}" class="btn btn-primary">Explorar Pilotos</a>
+    </div>
+{% endblock content %}

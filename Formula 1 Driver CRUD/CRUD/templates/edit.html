@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form id="editForm" method="post">
+        <div class="mb-3">
+            <label>Name</label>
+            <input type="text" name="name" id="name" placeholder="Driver's Name" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label>Team</label>
+            <input type="text" name="team" id="team" placeholder="Team" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label>Nationality</label>
+            <input type="text" name="nationality" id="nationality" placeholder="Nationality" class="form-control" required/>
+        </div>
+
+        <!-- Adicionando um campo oculto para armazenar o ID -->
+        <input type="hidden" name="driver_id" id="driver_id" value="{{driver.id}}"/>
+
+        <input type="button" value="Update" class="btn btn-primary mb-3" onclick="submitForm()"/>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Obtendo os valores dos campos
+            var name = document.getElementById('name').value;
+            var team = document.getElementById('team').value;
+            var nationality = document.getElementById('nationality').value;
+
+            // Obtendo o ID do driver do campo oculto
+            var driverId = document.getElementById('driver_id').value;
+
+            // Atualizando a ação do formulário com o ID
+            document.getElementById('editForm').action = "/update/" + driverId;
+
+            // Submetendo o formulário
+            document.getElementById('editForm').submit();
+        }
+    </script>
+{% endblock content %}

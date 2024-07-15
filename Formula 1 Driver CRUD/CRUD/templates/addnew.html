@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/add" method="post">
+    <div class="mb-3">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Driver's Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Team</label>
+        <input type="text" name="team" placeholder="Team" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Nationality</label>
+        <input type="text" name="nationality" placeholder="Nationality" class="form-control" />
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary mb-3 btn-submit" />
+</form>
+{% endblock content %}
+

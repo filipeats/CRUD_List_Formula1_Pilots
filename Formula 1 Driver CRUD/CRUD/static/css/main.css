@@ -1,0 +1,18 @@
+/* Adiciona estilos específicos para o fundo do site */
+.bg-black {
+    background-color: black;
+    color: white; /* Adapte a cor do texto conforme necessário */
+}
+
+/* Adiciona estilos específicos para os botões "Add New" e "Submit" */
+.btn-add-new {
+    background-color: white;
+    color: black; /* Adapte a cor do texto conforme necessário */
+}
+
+.btn-submit {
+    background-color: white;
+    color: black; /* Adapte a cor do texto conforme necessário */
+}
+
+
